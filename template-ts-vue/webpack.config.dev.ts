@@ -9,6 +9,9 @@ const config: webpack.Configuration = {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
   },
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   module: {
     rules: [
       {
@@ -17,7 +20,8 @@ const config: webpack.Configuration = {
       },
       {
         test: /.ts$/,
-        use: "ts-loader",
+        loader: "ts-loader",
+        options: { appendTsSuffixTo: [/\.vue$/] },
       },
     ],
   },

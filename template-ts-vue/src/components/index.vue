@@ -1,9 +1,11 @@
 <template>
-  <div>1</div>
+  <div>hello world</div>
 </template>
 
 <script lang="ts">
-export default {};
+export default {
+  mounted() {},
+};
 </script>
 
 <style></style>
